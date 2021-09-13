@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class RootController extends BaseController {
+public class RootController {
 
     @RequestMapping(value = WebUrls.ROOT, method = RequestMethod.GET)
     public String root(Model model) {
-//        model.addAttribute("user", SecurityContextHolder.getContext().getAuthentication().ge);
         model.addAttribute("titolo", "Puppets!");
         return "index";
     }
