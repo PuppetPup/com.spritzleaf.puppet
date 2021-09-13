@@ -19,7 +19,7 @@ public final class AuthChecker {
     public boolean isAValidUser(Profilo user) {
         boolean isValid = user.getUsername().equals(admin.getUsername()) && user.getPassword().equals(admin.getPassword());
         if (isValid) {
-            session.setAttribute("user", user);
+            session.setAttribute("user", admin);
             return true;
         }
         return false;

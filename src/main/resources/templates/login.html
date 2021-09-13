@@ -5,9 +5,9 @@
     <title>Login</title>
 </head>
 <body>
-<form>
+<form action="#" th:action="@{/home}" th:object="${profilo}" method="post">
     <table border="1">
-        <tr action="#" th:action="@{/login}" th:object="${user}" method="get">
+        <tr>
             <td><label>Username</label></td>
             <td><input type="text" th:field="*{username}" /></td>
         </tr>
