@@ -6,6 +6,8 @@
 </head>
 <body>
 <p th:text="${session.user.nome}"></p>
-
+<form action="#" th:action="@{/logout}" th:object="${}" method="get">
+    <input type="submit" value="Submit" />
+</form>
 </body>
 </html>
