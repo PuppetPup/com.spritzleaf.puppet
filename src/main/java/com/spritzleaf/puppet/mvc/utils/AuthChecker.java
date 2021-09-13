@@ -1,6 +1,6 @@
-package com.example.mvc.demo.mvc.utils;
+package com.spritzleaf.puppet.mvc.utils;
 
-import com.example.mvc.demo.mvc.model.Profilo;
+import com.spritzleaf.puppet.mvc.model.Profilo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

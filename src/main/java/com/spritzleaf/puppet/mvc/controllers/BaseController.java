@@ -1,7 +1,7 @@
-package com.example.mvc.demo.mvc.controllers;
+package com.spritzleaf.puppet.mvc.controllers;
 
 
-import com.example.mvc.demo.mvc.utils.AuthChecker;
+import com.spritzleaf.puppet.mvc.utils.AuthChecker;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpSession;

@@ -1,9 +1,13 @@
-package com.example.mvc.demo.mvc.config;
+package com.spritzleaf.puppet.mvc.config;
 
-import com.example.mvc.demo.mvc.model.Profilo;
+import com.spritzleaf.puppet.mvc.constants.Roles;
+import com.spritzleaf.puppet.mvc.model.Profilo;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Configuration
 public class SessionConfig {
@@ -22,11 +26,15 @@ public class SessionConfig {
 
     @Bean
     public Profilo getRootProfile() {
+        Set<Roles> ruoli = new HashSet<>();
+        ruoli.add(Roles.ADMIN);
         return Profilo.builder()
+                .id(1L)
                 .username(username)
                 .password(password)
                 .cognome(cognome)
                 .nome(nome)
+                .roles(ruoli)
                 .build();
     }
 }

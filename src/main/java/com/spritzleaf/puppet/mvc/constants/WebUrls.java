@@ -1,4 +1,4 @@
-package com.example.mvc.demo.mvc.constants;
+package com.spritzleaf.puppet.mvc.constants;
 
 
 import org.springframework.stereotype.Component;

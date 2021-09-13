@@ -1,4 +1,4 @@
-package com.example.mvc.demo.mvc;
+package com.spritzleaf.puppet.mvc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

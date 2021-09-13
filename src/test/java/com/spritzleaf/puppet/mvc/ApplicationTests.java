@@ -1,4 +1,4 @@
-package com.example.mvc.demo.mvc;
+package com.spritzleaf.puppet.mvc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

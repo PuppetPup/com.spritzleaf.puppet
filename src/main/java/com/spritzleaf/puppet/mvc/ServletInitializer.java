@@ -1,4 +1,4 @@
-package com.example.mvc.demo.mvc;
+package com.spritzleaf.puppet.mvc;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
