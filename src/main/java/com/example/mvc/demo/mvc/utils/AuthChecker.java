@@ -28,4 +28,8 @@ public final class AuthChecker {
     public boolean isLogged() {
         return session.getAttribute("user") != null;
     }
+
+    public void exit(){
+        session.invalidate();
+    }
 }
