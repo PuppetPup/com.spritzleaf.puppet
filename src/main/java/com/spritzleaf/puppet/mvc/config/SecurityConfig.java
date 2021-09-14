@@ -42,23 +42,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsService);
     }
 
-    //TODO check altre soluzioni?
     @SuppressWarnings("deprecation")
     @Bean
     public static NoOpPasswordEncoder passwordEncoder() {
         return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();
     }
-
-//    @Override
-//    protected void configure(final HttpSecurity http) throws Exception {
-//        http
-//                .formLogin()
-//                .loginPage("/login.html")
-//                .failureUrl("/login-error.html")
-//                .and()
-//                .logout()
-//                .logoutSuccessUrl("/index.html");
-//    }
-
 
 }
