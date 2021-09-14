@@ -15,12 +15,11 @@ public class POLDaoImpl implements POLDao {
 
     private static final String[] companies = new String[]{"Cisco", "Betacom", "Innovery", "Digid", "PanziCompany"};
     private static final String[] codes = new String[]{"abeuhd12", "jkshdka23", "kjshf879", "hskajsj29", "shfjs989", "jhdk873"};
-    private static List<POL> lista;
+    private static final List<POL> lista = new ArrayList<>();
 
     @Override
     public List<POL> findAll() {
         if (lista.isEmpty()) {
-            lista = new ArrayList<>();
             for (int i = 0; i < 10; i++) {
                 lista.add(generaRandomPOL());
             }
