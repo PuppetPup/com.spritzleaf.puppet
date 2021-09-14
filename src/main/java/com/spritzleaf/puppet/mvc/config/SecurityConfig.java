@@ -22,12 +22,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers(WebUrls.ROOT)
-                // .authenticated()
-                .permitAll()
+                .anyRequest()
+                .authenticated()
                 .and()
-                .formLogin();
-
+                .formLogin()
+                .loginPage(WebUrls.LOGIN)
+                .permitAll();
 
         http.authorizeRequests()
                 .and()
@@ -42,6 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsService);
     }
 
+    //TODO check altre soluzioni?
     @SuppressWarnings("deprecation")
     @Bean
     public static NoOpPasswordEncoder passwordEncoder() {
@@ -58,7 +59,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .logout()
 //                .logoutSuccessUrl("/index.html");
 //    }
-
 
 
 }
