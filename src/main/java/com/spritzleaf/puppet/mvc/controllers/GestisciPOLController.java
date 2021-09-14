@@ -17,7 +17,7 @@ public class GestisciPOLController {
     @GetMapping(WebUrls.GEST_POL)
     public String getPols(Model model) {
         model.addAttribute("pols", polService.getAllPOLs());
-        model.addAttribute("title", "Gestisci POL");
+        model.addAttribute("titolo", "Gestisci POL");
         return "gestisciPol";
     }
 

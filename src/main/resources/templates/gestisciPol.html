@@ -6,9 +6,15 @@
     <title>Title</title>
 </head>
 <body>
-<div class="alert alert-danger" role="alert">
-    This is a danger alert—check it out!
+<h4 th:text="${titolo}"></h4>
+
+<div class="row mt-4 px-4">
+    <div id="nomeCheTiPare" class="table-home pt-3 table-responsive">
+        <table th:replace="layouts/components/tableView :: tableView(listaPol=${pols})"></table>
+    </div>
 </div>
+
 <div th:replace="layouts/boostrScript :: boostrap_script"></div>
+
 </body>
 </html>

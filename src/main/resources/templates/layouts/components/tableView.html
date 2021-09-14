@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<table th:fragment="tableView(listaPol)" class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Company</th>
+        <th scope="col">Status</th>
+        <th scope="col">POL Code</th>
+        <th scope="col">Cause</th>
+        <th scope="col">Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="lista: ${listaPol}">
+        <td th:text="${lista.company}"></td>
+        <td th:text="${lista.stato.toString().toLowerCase()}"></td>
+        <td th:text="${lista.polCode.toUpperCase()}"></td>
+        <td th:text="${lista.causale}"></td>
+        <td th:text="${lista.amount.toString()+' €'}"></td>
+    </tr>
+    </tbody>
+</table>
+</html>

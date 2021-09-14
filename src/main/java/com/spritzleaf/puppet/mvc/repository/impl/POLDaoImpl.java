@@ -15,6 +15,7 @@ public class POLDaoImpl implements POLDao {
 
     private static final String[] companies = new String[]{"Cisco", "Betacom", "Innovery", "Digid", "PanziCompany"};
     private static final String[] codes = new String[]{"abeuhd12", "jkshdka23", "kjshf879", "hskajsj29", "shfjs989", "jhdk873"};
+    private static final String[] causes = new String[]{"pagamento prima rata", "pagamento fattoria", "pagamento vaccini", "pagamento mucche", "pagamento fagioli"};
     private static final List<POL> lista = new ArrayList<>();
 
     @Override
@@ -32,6 +33,7 @@ public class POLDaoImpl implements POLDao {
                 .amount((long) (1000 + random() * 2000))
                 .polCode(getRandomValue(codes))
                 .company(getRandomValue(companies))
+                .causale(getRandomValue(causes))
                 .stato(getRandomState())
                 .build();
     }
